@@ -232,9 +232,21 @@ export async function POST(request: Request) {
       return new Response(stream);
     }
   } catch (error) {
+    console.error('Error in POST /api/chat:', error);
+    
     if (error instanceof ChatSDKError) {
       return error.toResponse();
     }
+
+    // Handle any other unexpected errors
+    return Response.json(
+      {
+        code: 'internal_error',
+        message: 'An unexpected error occurred. Please try again later.',
+        cause: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    );
   }
 }
 
