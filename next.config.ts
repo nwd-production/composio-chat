@@ -1,10 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // 'ppr' a été remplacé par 'cacheComponents' dans Next.js 16
-    cacheComponents: true,
-  },
+  // Next.js 16: cacheComponents n'est plus dans experimental
+  cacheComponents: true,
   images: {
     remotePatterns: [
       {
