@@ -12,7 +12,7 @@ export const myProvider = isTestEnvironment
     })
   : customProvider({
       languageModels: {
-        'chat-model': anthropic('claude-4-sonnet-20250514'),
-        'title-model': anthropic('claude-3-5-haiku-latest'),
+        'chat-model': anthropic('claude-opus-4-5'),
+        'title-model': anthropic('claude-opus-4-5'),
       },
     });

@@ -42,7 +42,7 @@ This is a Next.js AI chatbot application using:
 
 ### AI Integration
 
-- Default model: `claude-4-sonnet-20250514` for chat, `claude-3-5-haiku-latest` for titles
+- Default model: `claude-4-sonnet-20250514` for chat, `claude-3-5-haiku-20241022` for titles
 - Configurable via `/lib/ai/providers.ts`
 - Test environment uses mock models from `/lib/ai/models.test.ts`
 - AI tools defined in `/lib/ai/tools/`
